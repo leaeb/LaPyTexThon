@@ -1,0 +1,3 @@
+key =Text1
+key2=Text2
+key3 =Text3
