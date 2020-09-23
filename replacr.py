@@ -41,7 +41,8 @@ def replace(tex_file, map_file):
     tex_code = ''
     with open(tex_file, encoding='utf-8') as tf:
         tex_code = tf.read()
-
+        tex_code = tex_code.replace(tex_file.split('.')[0], 'new' + tex_file.split('.')[0])
+        
     # replace placeholders in tex file
     for key in mapping_dict:    
         tex_code = tex_code.replace('§{' + key + '}', mapping_dict[key])
