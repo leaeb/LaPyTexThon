@@ -34,7 +34,7 @@ def replace(tex_file, map_file):
     with open(map_file, encoding='utf-8') as mf:
         lines = [line.rstrip() for line in mf]
         for line in lines:
-            parts = line.split('=')
+            parts = line.split('=', 1) #splits only by first occurence of =
             mapping_dict[parts[0].strip()] = parts[1]
 
     # read tex file
